@@ -1,0 +1,153 @@
+.purchase-steps {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .progress {
+    height: 20px;
+    background-color: #004d40; /* Teal color */
+    transition: width 0.3s ease;
+  }
+  
+  .steps-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .steps-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .steps-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .steps-buttons button:hover {
+    background-color: #ddd;
+  }
+  
+  .steps-buttons button:first-of-type {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .steps-buttons button:last-of-type {
+    background-color: #004d40;
+    color: white;
+  }
+  
+  .steps-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .steps-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .steps-content li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .steps-content li img {
+    max-width: 50px;
+    margin-right: 20px;
+  }
+  
+  .steps-content li div {
+    flex-grow: 1;
+  }
+  
+  .steps-content li h3 {
+    margin: 0;
+  }
+  
+  .steps-content li p {
+    margin: 5px 0;
+  }
+  
+  .delivery-option, .payment-option {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .delivery-option label, .payment-option label {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .form-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #004d40; /* Teal background */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .modal button:hover {
+    background-color: #002d20; /* Darker teal background */
+  }
+  

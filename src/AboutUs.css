@@ -1,0 +1,39 @@
+.about-us-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .hero-section {
+    background: url('https://via.placeholder.com/800x400?') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2em;
+  }
+  
+  .content-section {
+    padding: 40px 20px;
+  }
+  
+  .content-section h2 {
+    font-size: 2em;
+    color: #004d40;
+    margin-bottom: 10px;
+  }
+  
+  .content-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  

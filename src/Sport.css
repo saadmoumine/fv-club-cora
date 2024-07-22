@@ -1,0 +1,49 @@
+.Sport {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #e0f2f1; /* Light teal background */
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 40px;
+    color: #004d40; /* Teal color for headings */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2 svg {
+    margin-right: 10px;
+  }
+  
+  .carousel-container {
+    width: 90%;
+    margin-top: 20px;
+  }
+  
+  .booking-container,
+  .reservation-container,
+  .samantha-progress-container,
+  .laura-program-container,
+  .noah-goals-container {
+    width: 80%;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  

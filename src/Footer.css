@@ -1,0 +1,23 @@
+.footer {
+  background-color: #004d40; /* Teal background to match the header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-social {
+  margin: 20px 0;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #80cbc4; /* Light teal for social links */
+  font-size: 14px;
+}
+
+.footer-social a:hover {
+  color: #ffffff; /* White on hover */
+}
