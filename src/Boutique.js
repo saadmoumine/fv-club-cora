@@ -8,6 +8,7 @@ function Boutique() {
   const [searchTerm, setSearchTerm] = useState('');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
+  const [category, setCategory] = useState('All');
   const { addToCart } = useContext(CartContext);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -15,7 +16,8 @@ function Boutique() {
     return (
       product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (minPrice === '' || product.price >= parseFloat(minPrice)) &&
-      (maxPrice === '' || product.price <= parseFloat(maxPrice))
+      (maxPrice === '' || product.price <= parseFloat(maxPrice)) &&
+      (category === 'All' || product.category === category)
     );
   });
 
@@ -57,12 +59,22 @@ function Boutique() {
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
         />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="All">All</option>
+          <option value="Swimming">Swimming</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Football">Football</option>
+          <option value="Basketball">Basketball</option>
+        </select>
       </div>
 
       <div className="product-grid">
         {filteredProducts.map((product) => (
           <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} />
+            <img src={process.env.PUBLIC_URL +product.src} alt={product.name} />
             <h3>{product.name}</h3>
             <p>${product.price.toFixed(2)}</p>
             <p>{product.description}</p>

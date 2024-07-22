@@ -19,7 +19,8 @@
     animation: slideInDown 1s ease-in-out;
   }
   
-  .filters input {
+  .filters input,
+  .filters select {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -89,7 +90,7 @@
   }
   
   .product-card button {
-    background-color: #FF6F00;
+    background-color: #013306;
     color: white;
     border: none;
     padding: 10px;

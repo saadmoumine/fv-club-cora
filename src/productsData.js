@@ -1,34 +1,120 @@
 const productsData = [
-    {
-      id: 1,
-      name: 'Swimming Goggles',
-      price: 25.99,
-      image: 'https://via.placeholder.com/200x200?text=Swimming+Goggles',
-      category: 'Swimming',
-    },
-    {
-      id: 2,
-      name: 'Tennis Racket',
-      price: 89.99,
-      image: 'https://via.placeholder.com/200x200?text=Tennis+Racket',
-      category: 'Tennis',
-    },
-    {
-      id: 3,
-      name: 'Football',
-      price: 29.99,
-      image: 'https://via.placeholder.com/200x200?text=Football',
-      category: 'Football',
-    },
-    {
-      id: 4,
-      name: 'Basketball',
-      price: 34.99,
-      image: 'https://via.placeholder.com/200x200?text=Basketball',
-      category: 'Basketball',
-    },
-    // Add more products as needed
-  ];
-  
-  export default productsData;
-  
+  {
+    id: 1,
+    src: '/images/Swimming Goggles.jpg',
+    name: 'Swimming Goggles',
+    description: 'High-quality swimming goggles for clear vision underwater.',
+    price: 25.99,
+    category: 'Swimming',
+  },
+  {
+    id: 2,
+    src: '/images/Swimming Cap.jpg',
+    name: 'Swimming Cap',
+    description: 'Comfortable and durable swimming cap.',
+    price: 10.99,
+    category: 'Swimming',
+  },
+  {
+    id: 3,
+    src: '/images/Swim Fins.jpg',
+    name: 'Swim Fins',
+    description: 'Enhance your swimming experience with these swim fins.',
+    price: 29.99,
+    category: 'Swimming',
+  },
+
+  {
+    id: 1,
+    src: '/images/Tennis Racket.webp',
+    name: 'Tennis Racket',
+    description: 'High-quality tennis racket for competitive play.',
+    price: 120.99,
+    category: 'Tennis',
+  },
+  {
+    id: 2,
+    src: '/images/Tennis Balls.webp',
+    name: 'Tennis Balls',
+    description: 'Pack of 3 high-quality tennis balls.',
+    price: 15.99,
+    category: 'Tennis',
+  },
+  {
+    id: 3,
+    src: '/images/Tennis Shoes.png',
+    name: 'Tennis Shoes',
+    description: 'Comfortable and durable tennis shoes.',
+    price: 79.99,
+    category: 'Tennis',
+  },
+
+  {
+    id: 1,
+    src: '/images/Soccer Ball.jpg',
+    name: 'Soccer Ball',
+    description: 'Official size and weight soccer ball for professional games.',
+    price: 29.99,
+    category: 'Football',
+  },
+  {
+    id: 2,
+    src: '/images/Soccer Cleats.webp',
+    name: 'Soccer Cleats',
+    description: 'High-quality soccer cleats for better performance.',
+    price: 79.99,
+    category: 'Football',
+  },
+  {
+    id: 3,
+    src: '/images/Shin Guards.jpg',
+    name: 'Shin Guards',
+    description: 'Durable shin guards for maximum protection.',
+    price: 19.99,
+    category: 'Football',
+  },
+  {
+    id: 4,
+    src: '/images/Goalkeeper Gloves.jpg',
+    name: 'Goalkeeper Gloves',
+    description: 'Professional goalkeeper gloves with excellent grip.',
+    price: 39.99,
+    category: 'Football',
+  },
+
+  {
+    id: 2,
+    src: '/images/Basketball Hoop.webp',
+    name: 'Basketball Hoop',
+    description: 'Durable and adjustable basketball hoop for indoor and outdoor use.',
+    price: 199.99,
+    category: 'Basketball',
+  },
+  {
+    id: 3,
+    src: '/images/Basketball Net.jpg',
+    name: 'Basketball Net',
+    description: 'Heavy-duty basketball net compatible with most standard hoops.',
+    price: 12.99,
+    category: 'Basketball',
+  },
+  {
+    id: 4,
+    src: '/images/Basketball Shoes.jpg',
+    name: 'Basketball Shoes',
+    description: 'High-performance basketball shoes with excellent grip and support.',
+    price: 99.99,
+    category: 'Basketball',
+  },
+  {
+    id: 5,
+    src: '/images/Basketball Jersey.jpg',
+    name: 'Basketball Jersey',
+    description: 'Breathable and lightweight basketball jersey for maximum comfort.',
+    price: 49.99,
+    category: 'Basketball',
+  },
+  // Add more products as needed
+];
+
+export default productsData;
