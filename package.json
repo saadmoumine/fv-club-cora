@@ -2,7 +2,7 @@
   "name": "club-cora",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://saadmoumine.github.io/club-cora",
+  "homepage": "https://saadmoumine.github.io/fv-club-cora",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
