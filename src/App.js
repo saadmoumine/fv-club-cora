@@ -4,6 +4,7 @@ import './App.css';
 import Header from './header';
 import Footer from './Footer';
 import Home from './Home';
+import Activities from './Activities';
 import MemberProfile from './MemberProfile';
 import InstructorProfile from './InstructorProfile';
 import Login from './Login';
@@ -19,7 +20,6 @@ import Cart from './Cart';
 import { CartProvider } from './context/CartContext';
 import PurchaseSteps from './PurchaseSteps';
 
-
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [accountType, setAccountType] = useState(null);
@@ -33,38 +33,40 @@ function App() {
     setLoggedInUser(null);
     setAccountType(null);
   };
+
   return (
     <CartProvider>
-    <Router>
-      <div className="App">
-        <Header loggedInUser={loggedInUser} setLoggedInUser={handleLogout} accountType={accountType} />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route path="/signup" element={<SignUp onSignUp={handleLogin} />} />
-          <Route path="/swimming" element={<Swimming />} />
-          <Route path="/tennis" element={<Tennis />} />
-          <Route path="/football" element={<Football />} />
-          <Route path="/basketball" element={<Basketball />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/boutique" element={<Boutique />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/purchase-steps" element={<PurchaseSteps />} />
-          <Route
-            path="/member-profile"
-            element={loggedInUser && accountType === 'member' ? <MemberProfile /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/instructor-profile"
-            element={loggedInUser && accountType === 'instructor' ? <InstructorProfile /> : <Navigate to="/login" />}
-          />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-    </CartProvider >
+      <Router>
+        <div className="App">
+          <Header loggedInUser={loggedInUser} setLoggedInUser={handleLogout} accountType={accountType} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Activities" element={<Activities />} />
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
+            <Route path="/signup" element={<SignUp onSignUp={handleLogin} />} />
+            <Route path="/swimming" element={<Swimming />} />
+            <Route path="/tennis" element={<Tennis />} />
+            <Route path="/football" element={<Football />} />
+            <Route path="/basketball" element={<Basketball />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/boutique" element={<Boutique />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/purchase-steps" element={<PurchaseSteps />} />
+            <Route
+              path="/member-profile"
+              element={loggedInUser && accountType === 'member' ? <MemberProfile /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/instructor-profile"
+              element={loggedInUser && accountType === 'instructor' ? <InstructorProfile /> : <Navigate to="/login" />}
+            />
+             <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

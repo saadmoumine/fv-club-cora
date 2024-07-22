@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
+import { CartContext } from './context/CartContext';
 
-function SignUp({ onSignUp }) {
+function SignUp() {
+  const { setUser } = useContext(CartContext);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     accountType: '',
@@ -23,7 +25,7 @@ function SignUp({ onSignUp }) {
 
   const nextStep = () => {
     if (formData.accountType === 'guest') {
-      onSignUp(null);
+      setUser({ email: formData.email, role: formData.accountType });
       navigate('/home');
     } else {
       setStep(step + 1);
@@ -64,7 +66,7 @@ function SignUp({ onSignUp }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      onSignUp(formData.name, formData.accountType);
+      setUser({ email: formData.email, role: formData.accountType });
       if (formData.accountType === 'member') {
         navigate('/member-profile');
       } else if (formData.accountType === 'instructor') {

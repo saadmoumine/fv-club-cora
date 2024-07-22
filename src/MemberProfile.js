@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Progress from './Progress';
 import Goals from './Goals';
 import { CartContext } from './context/CartContext';
+import './MemberProfile.css';
 
 function MemberProfile() {
   const { bookings = [], reservations = [], purchases = [], updateBookingStatus } = useContext(CartContext);
@@ -24,9 +25,13 @@ function MemberProfile() {
       <p>Welcome to your profile page, Member!</p>
       <p>Here you can update your information, view your activities, and more.</p>
       
-      <h2>Progress</h2>
       <div className="profile-section">
-        <Progress />
+        <Progress 
+          bookings={bookings}
+          handleStart={handleStart}
+          handleFinish={handleFinish}
+          handleDelete={handleDelete}
+        />
       </div>
 
       <h2>Individual Classes Booked</h2>
@@ -37,9 +42,6 @@ function MemberProfile() {
               <h3>{booking.name}</h3>
               <p>{booking.description}</p>
               <p>Status: {booking.status}</p>
-              <button onClick={() => handleStart(booking)}>Start</button>
-              <button onClick={() => handleFinish(booking)}>Finish</button>
-              <button onClick={() => handleDelete(booking)}>Delete</button>
             </div>
           ))
         ) : (

@@ -47,7 +47,7 @@ function Booking({ courses, instructors, sport, selectedInstructor }) {
     e.preventDefault();
     const duration = calculateDuration(formData.startTime, formData.endTime);
     const coursePrice = duration * 20;
-    const lanePrices = formData.lanes.reduce((acc, lane) => acc + 5, 0); // Assuming each lane is $5
+    const lanePrices = formData.lanes.reduce((acc, lane) => acc + 5, 0);
     const totalPrice = coursePrice + lanePrices;
     const product = {
       id: `${formData.date}-${formData.startTime}-${formData.endTime}`,
@@ -60,6 +60,7 @@ function Booking({ courses, instructors, sport, selectedInstructor }) {
     addToCart(product);
     alert('Booking Confirmed');
   };
+  
 
   const duration = calculateDuration(formData.startTime, formData.endTime);
   const coursePrice = duration * 20;

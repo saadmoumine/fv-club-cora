@@ -1,0 +1,146 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container h1,
+  .profile-container h2 {
+    text-align: center;
+    color: #004d40; /* Teal color */
+  }
+  
+  .profile-container p {
+    text-align: center;
+    color: #555;
+  }
+  
+  .profile-section {
+    margin: 20px 0;
+  }
+  
+  .profile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .profile-card p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .profile-card button {
+    margin: 5px 5px 0 0;
+    padding: 8px 16px;
+    background-color: #004d40; /* Teal color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-card button:hover {
+    background-color: #00796b; /* Dark teal color */
+  }
+  
+  .profile-card .delete-button {
+    background-color: #e53935; /* Red color */
+  }
+  
+  .profile-card .delete-button:hover {
+    background-color: #d32f2f; /* Dark red color */
+  }
+  
+  .profile-card .finish-button {
+    background-color: #43a047; /* Green color */
+  }
+  
+  .profile-card .finish-button:hover {
+    background-color: #388e3c; /* Dark green color */
+  }
+
+  .profile-container {
+    padding: 20px;
+  }
+  
+  .profile-section {
+    margin-bottom: 20px;
+  }
+  
+  .profile-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .profile-card p {
+    margin: 5px 0;
+  }
+  
+  .profile-card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .start-button,
+  .finish-button,
+  .delete-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button {
+    background-color: #4caf50; /* Green background */
+    color: white;
+  }
+  
+  .start-button:hover {
+    background-color: #45a049;
+  }
+  
+  .finish-button {
+    background-color: #ff9800; /* Orange background */
+    color: white;
+  }
+  
+  .finish-button:hover {
+    background-color: #fb8c00;
+  }
+  
+  .delete-button {
+    background-color: #f44336; /* Red background */
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #e53935;
+  }
+  
+  

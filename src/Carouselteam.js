@@ -61,7 +61,7 @@ function Carouselteam({ images, onBookNow }) {
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
           <div key={index} className="carousel-slide">
-            <img src={image.src} alt={`Slide ${index + 1}`} className="carousel-image" />
+            <img src={process.env.PUBLIC_URL+image.src} alt={`Slide ${index + 1}`} className="carousel-image" />
             <div className="carousel-details">
               <h3>{image.title}</h3>
               <p>{image.description}</p>

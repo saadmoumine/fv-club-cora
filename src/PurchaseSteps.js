@@ -3,7 +3,6 @@ import { CartContext } from './context/CartContext';
 import './PurchaseSteps.css';
 
 function PurchaseSteps() {
-  const { cart, confirmPurchase } = useContext(CartContext);
   const [step, setStep] = useState(1);
   const [shippingInfo, setShippingInfo] = useState({
     name: '',
@@ -13,11 +12,17 @@ function PurchaseSteps() {
     zip: '',
     country: '',
     deliveryOption: 'pickup',
-    paymentOption: 'online'
+    paymentOption: 'online',
+    cardNumber: '',
+    expiryDate: '',
+    cvv: '',
   });
+  const { cart, confirmPurchase } = useContext(CartContext);
 
   const nextStep = () => {
-    setStep(step + 1);
+    if (validateStep(step)) {
+      setStep(step + 1);
+    }
   };
 
   const previousStep = () => {
@@ -25,8 +30,44 @@ function PurchaseSteps() {
   };
 
   const handleConfirmPurchase = () => {
-    confirmPurchase();
-    alert('Purchase Confirmed!');
+    if (validateStep(2)) {
+      confirmPurchase();
+      alert('Purchase Confirmed!');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setShippingInfo({ ...shippingInfo, [name]: value });
+  };
+
+  const validateStep = (currentStep) => {
+    if (currentStep === 1) {
+      if (shippingInfo.deliveryOption === 'delivery') {
+        if (
+          !shippingInfo.name ||
+          !shippingInfo.address ||
+          !shippingInfo.city ||
+          !shippingInfo.state ||
+          !shippingInfo.zip ||
+          !shippingInfo.country
+        ) {
+          alert('Please fill in all required fields for delivery.');
+          return false;
+        }
+      }
+      if (shippingInfo.paymentOption === 'online') {
+        if (
+          !shippingInfo.cardNumber ||
+          !shippingInfo.expiryDate ||
+          !shippingInfo.cvv
+        ) {
+          alert('Please fill in all required payment fields.');
+          return false;
+        }
+      }
+    }
+    return true;
   };
 
   return (
@@ -35,7 +76,7 @@ function PurchaseSteps() {
         <div className="progress" style={{ width: `${(step / 2) * 100}%` }}></div>
       </div>
       <div className="steps-content">
-        {step === 1 && <Step1 cart={cart} shippingInfo={shippingInfo} setShippingInfo={setShippingInfo} />}
+        {step === 1 && <Step1 cart={cart} shippingInfo={shippingInfo} handleChange={handleChange} />}
         {step === 2 && <Step2 cart={cart} shippingInfo={shippingInfo} />}
       </div>
       <div className="steps-buttons">
@@ -47,40 +88,52 @@ function PurchaseSteps() {
   );
 }
 
-function Step1({ cart, shippingInfo, setShippingInfo }) {
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setShippingInfo({ ...shippingInfo, [name]: value });
-  };
-
+function Step1({ cart, shippingInfo, handleChange }) {
   return (
     <div>
       <h3>Step 1: Enter Shipping and Payment Information</h3>
       <form>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={shippingInfo.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={shippingInfo.email}
-          onChange={handleChange}
-          required
-        />
+        <h4>Pick up or Delivery:</h4>
+        <div className="delivery-option">
+          <label>
+            <input
+              type="radio"
+              name="deliveryOption"
+              value="pickup"
+              checked={shippingInfo.deliveryOption === 'pickup'}
+              onChange={handleChange}
+            />
+            Pick Up at the Club
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="deliveryOption"
+              value="delivery"
+              checked={shippingInfo.deliveryOption === 'delivery'}
+              onChange={handleChange}
+            />
+            Delivery
+          </label>
+        </div>
+
         {shippingInfo.deliveryOption === 'delivery' && (
           <>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={shippingInfo.name}
+              onChange={handleChange}
+              required
+            />
             <input
               type="text"
               name="address"
               placeholder="Address"
               value={shippingInfo.address}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -88,6 +141,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="City"
               value={shippingInfo.city}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -95,6 +149,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="State"
               value={shippingInfo.state}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -102,6 +157,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="Zip Code"
               value={shippingInfo.zip}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -109,9 +165,12 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="Country"
               value={shippingInfo.country}
               onChange={handleChange}
+              required
             />
           </>
         )}
+
+        <h4>Payment Method:</h4>
         <div className="payment-option">
           <label>
             <input
@@ -127,7 +186,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
             <label>
               <input
                 type="radio"
-                name="paymentOption"
+              name="paymentOption"
                 value="register"
                 checked={shippingInfo.paymentOption === 'register'}
                 onChange={handleChange}
@@ -136,6 +195,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
             </label>
           )}
         </div>
+
         {shippingInfo.paymentOption === 'online' && (
           <>
             <input
@@ -144,6 +204,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="Card Number"
               value={shippingInfo.cardNumber}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -151,6 +212,7 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="Expiry Date (MM/YY)"
               value={shippingInfo.expiryDate}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -158,24 +220,26 @@ function Step1({ cart, shippingInfo, setShippingInfo }) {
               placeholder="CVV"
               value={shippingInfo.cvv}
               onChange={handleChange}
+              required
             />
           </>
         )}
+
+        <h4>Items in Cart:</h4>
+        <ul>
+          {cart.map((item) => (
+            <li key={item.id}>
+              <img src={process.env.PUBLIC_URL + item.image} alt={item.name} />
+              <div>
+                <h3>{item.name}</h3>
+                <p>${item.price.toFixed(2)}</p>
+                <p>Quantity: {item.quantity}</p>
+                <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </form>
-      <h4>Items in Cart:</h4>
-      <ul>
-        {cart.map((item) => (
-          <li key={item.id}>
-            <img src={process.env.PUBLIC_URL + item.image} alt={item.name} />
-            <div>
-              <h3>{item.name}</h3>
-              <p>${item.price.toFixed(2)}</p>
-              <p>Quantity: {item.quantity}</p>
-              <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
@@ -201,7 +265,7 @@ function Step2({ cart, shippingInfo }) {
       {shippingInfo.paymentOption === 'online' && (
         <>
           <h4>Payment Information:</h4>
-          <p>Card Number: **** **** **** {shippingInfo.cardNumber?.slice(-4)}</p>
+          <p>Card Number: **** **** **** {shippingInfo.cardNumber.slice(-4)}</p>
           <p>Expiry Date: {shippingInfo.expiryDate}</p>
         </>
       )}

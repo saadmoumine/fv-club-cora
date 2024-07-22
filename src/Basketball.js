@@ -14,92 +14,116 @@ import RegistrationModal from './RegistrationModal';
 const basketballProducts = [
   {
     id: 1,
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    name: 'Swimming Goggles',
-    description: 'High-quality swimming goggles for clear vision underwater.',
-    price: 25.99,
+    src: '/images/Basketballb.jpg',
+    name: 'Basketball',
+    description: 'Official size and weight basketball for professional games.',
+    price: 29.99,
   },
   {
     id: 2,
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    name: 'Swimming Cap',
-    description: 'Comfortable and durable swimming cap.',
-    price: 10.99,
+    src: '/images/Basketball Hoop.webp',
+    name: 'Basketball Hoop',
+    description: 'Durable and adjustable basketball hoop for indoor and outdoor use.',
+    price: 199.99,
   },
   {
     id: 3,
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    name: 'Swim Fins',
-    description: 'Enhance your swimming experience with these swim fins.',
-    price: 29.99,
+    src: '/images/Basketball Net.jpg',
+    name: 'Basketball Net',
+    description: 'Heavy-duty basketball net compatible with most standard hoops.',
+    price: 12.99,
+  },
+  {
+    id: 4,
+    src: '/images/Basketball Shoes.jpg',
+    name: 'Basketball Shoes',
+    description: 'High-performance basketball shoes with excellent grip and support.',
+    price: 99.99,
+  },
+  {
+    id: 5,
+    src: '/images/Basketball Jersey.jpg',
+    name: 'Basketball Jersey',
+    description: 'Breathable and lightweight basketball jersey for maximum comfort.',
+    price: 49.99,
   },
   // Add more products as needed
 ];
 
+
 const basketballteam = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    title: 'title',
-    description: 'description',
-    price: '$price',
+    src: '/images/avatar-male.png',
+    title: 'Coach John Doe',
+    description: 'Experienced coach with a background in professional basketball.',
+    price: 50,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+2',
-    title: 'title',
-    description: 'description',
-    price: '$price',
+    src: '/images/avatar-female.png',
+    title: 'Coach Jane Smith',
+    description: 'Former college basketball star and expert in defensive strategies.',
+    price: 45,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+3',
-    title: 'title',
-    description: 'description',
-    price: '$price',
+    src: '/images/avatar-male.png',
+    title: 'Coach Mike Johnson',
+    description: 'Specializes in shooting techniques and offensive plays.',
+    price: 55,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+4',
-    title: 'title',
-    description: 'description',
-    price: '$price',
+    src: '/images/avatar-female.png',
+    title: 'Coach Emily Williams',
+    description: 'Youth basketball coach with a focus on skill development.',
+    price: 40,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+5',
-    title: 'title',
-    description: 'description',
-    price: '$price',
+    src: '/images/avatar-male.png',
+    title: 'Coach David Brown',
+    description: 'Fitness trainer and basketball conditioning specialist.',
+    price: 60,
   },
 ];
 
+
 const basketballcours = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
+    src: '/images/Beginner Basketball.jpg',
     title: 'Beginner Basketball',
     description: 'Introduction to basketball for beginners.',
     date: '2024-08-01',
     price: 50,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    title: 'Beginner Basketball',
-    description: 'Introduction to basketball for beginners.',
-    date: '2024-08-01',
-    price: 50,
+    src: '/images/Intermediate Basketball.jpg',
+    title: 'Intermediate Basketball',
+    description: 'Enhance your skills with intermediate level techniques and drills.',
+    date: '2024-08-15',
+    price: 75,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    title: 'Beginner Basketball',
-    description: 'Introduction to basketball for beginners.',
-    date: '2024-08-01',
-    price: 50,
+    src: '/images/Advanced Basketball.jpg',
+    title: 'Advanced Basketball',
+    description: 'Master advanced techniques and strategies for competitive play.',
+    date: '2024-09-01',
+    price: 100,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Basketball+1',
-    title: 'Beginner Basketball',
-    description: 'Introduction to basketball for beginners.',
-    date: '2024-08-01',
-    price: 50,
+    src: '/images/Basketball Fitness.webp',
+    title: 'Basketball Fitness',
+    description: 'Improve your fitness level with basketball-specific workouts.',
+    date: '2024-09-15',
+    price: 60,
+  },
+  {
+    src: '/images/Tactical Basketball.jpg',
+    title: 'Tactical Basketball',
+    description: 'Learn the tactical aspects of basketball, including game strategies.',
+    date: '2024-10-01',
+    price: 80,
   },
   // Add more courses as needed
 ];
+
 
 const basketballCourses = [
   'Beginner Basketball',
@@ -110,12 +134,13 @@ const basketballCourses = [
 ];
 
 const basketballInstructors = [
-  'Michael Jordan',
-  'LeBron James',
-  'Kobe Bryant',
-  'Shaquille O\'Neal',
-  'Stephen Curry'
+  'John Doe',
+  'Jane Smith',
+  'Mike Johnson',
+  'Emily Williams',
+  'David Brown'
 ];
+
 
 const basketballLanes = [
   { name: 'Court 1', price: 80 },
@@ -176,13 +201,14 @@ function Basketball() {
   return (
     <div className="Sport">
       <div className="content">
-        <ActivitySection title="Basketball" imageUrl="https://via.placeholder.com/800x400?" />
+       <ActivitySection title="Basketball" imageUrl="/images/basketpage.jpg" />
         <h2>Equipments</h2>
         <Carouselequi products={basketballProducts} addToCart={handleAddToCart} />
         <h2>Our team</h2>
         <Carouselteam images={basketballteam} onBookNow={handleBookNow} />
+        <h2>Classes</h2>
         <Carouselcours courses={basketballcours} onRegister={handleRegister} />
-        <Booking courses={basketballCourses} instructors={basketballInstructors} sport="Basketball" />
+        <Booking courses={basketballCourses} instructors={basketballInstructors} sport="Basketball" ref={bookingRef} selectedInstructor={selectedInstructor} />
         <Reservation trainers={basketballInstructors} lanes={basketballLanes} sport="Basketball" />
       </div>
       {selectedProduct && (

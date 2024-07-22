@@ -14,21 +14,21 @@ import RegistrationModal from './RegistrationModal';
 const swimmingProducts = [
   {
     id: 1,
-    src: 'https://via.placeholder.com/800x400?text=Swimming+1',
+    src: '/images/Swimming Goggles.jpg',
     name: 'Swimming Goggles',
     description: 'High-quality swimming goggles for clear vision underwater.',
     price: 25.99,
   },
   {
     id: 2,
-    src: 'https://via.placeholder.com/800x400?text=Swimming+2',
+    src: '/images/Swimming Cap.jpg',
     name: 'Swimming Cap',
     description: 'Comfortable and durable swimming cap.',
     price: 10.99,
   },
   {
     id: 3,
-    src: 'https://via.placeholder.com/800x400?text=Swimming+3',
+    src: '/images/Swim Fins.jpg',
     name: 'Swim Fins',
     description: 'Enhance your swimming experience with these swim fins.',
     price: 29.99,
@@ -38,72 +38,65 @@ const swimmingProducts = [
 
 const swimmingteam = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+1',
+    src: '/images/avatar-male.png',
     title: 'Michael Phelps',
     description: 'American competitive swimmer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+2',
+    src: '/images/avatar-female.png',
     title: 'Katie Ledecky',
     description: 'American competitive swimmer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+3',
+    src: '/images/avatar-male.png',
     title: 'Ryan Lochte',
     description: 'American competitive swimmer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+4',
+    src: '/images/avatar-female.png',
     title: 'Missy Franklin',
     description: 'American-Canadian competitive swimmer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+5',
+    src: '/images/avatar-male.png',
     title: 'Caeleb Dressel',
     description: 'American competitive swimmer.',
-    price: '$price',
+    price: 20,
   },
 ];
 
 const swimmingcours = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+1',
+    src: '/images/Beginner Swimming.jpg',
     title: 'Beginner Swimming',
     description: 'Introduction to swimming for beginners.',
     date: '2024-08-01',
     price: 50,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+2',
+    src: '/images/Intermediate Swimming.jpg',
     title: 'Intermediate Swimming',
     description: 'Intermediate level swimming skills.',
     date: '2024-08-08',
     price: 75,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+3',
+    src: '/images/Advanced Swimming.jpg',
     title: 'Advanced Swimming',
     description: 'Advanced swimming techniques and strategies.',
     date: '2024-08-15',
     price: 100,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+4',
+    src: '/images/Swim to Fit.jpg',
     title: 'Swim to Fit',
     description: 'Improve your fitness with swimming.',
     date: '2024-08-22',
     price: 60,
-  },
-  {
-    src: 'https://via.placeholder.com/800x400?text=Swimming+5',
-    title: 'Water Aerobics',
-    description: 'Aerobic exercises in the water.',
-    date: '2024-08-29',
-    price: 80,
   },
 ];
 
@@ -182,7 +175,7 @@ function Swimming() {
   return (
     <div className="Sport">
       <div className="content">
-        <ActivitySection title="Swimming" imageUrl="https://via.placeholder.com/800x400?" />
+        <ActivitySection title="Swimming" imageUrl="/images/Poolpage.jpg" />
         <h2>Equipments</h2>
         <Carouselequi products={swimmingProducts} addToCart={handleAddToCart} />
         <h2>Our team</h2>

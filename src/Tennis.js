@@ -14,21 +14,21 @@ import RegistrationModal from './RegistrationModal';
 const tennisProducts = [
   {
     id: 1,
-    src: 'https://via.placeholder.com/800x400?text=Tennis+1',
+    src: '/images/Tennis Racket.webp',
     name: 'Tennis Racket',
     description: 'High-quality tennis racket for competitive play.',
     price: 120.99,
   },
   {
     id: 2,
-    src: 'https://via.placeholder.com/800x400?text=Tennis+2',
+    src: '/images/Tennis Balls.webp',
     name: 'Tennis Balls',
     description: 'Pack of 3 high-quality tennis balls.',
     price: 15.99,
   },
   {
     id: 3,
-    src: 'https://via.placeholder.com/800x400?text=Tennis+3',
+    src: '/images/Tennis Shoes.png',
     name: 'Tennis Shoes',
     description: 'Comfortable and durable tennis shoes.',
     price: 79.99,
@@ -38,68 +38,61 @@ const tennisProducts = [
 
 const tennisteam = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+1',
+    src: '/images/avatar-male.png',
     title: 'Roger Federer',
     description: 'Swiss professional tennis player.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+2',
+    src: '/images/avatar-female.png',
     title: 'Serena Williams',
     description: 'American professional tennis player.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+3',
+    src: '/images/avatar-male.png',
     title: 'Rafael Nadal',
     description: 'Spanish professional tennis player.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+4',
+    src: '/images/avatar-male.png',
     title: 'Novak Djokovic',
     description: 'Serbian professional tennis player.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+5',
+    src: '/images/avatar-female.png',
     title: 'Naomi Osaka',
     description: 'Japanese professional tennis player.',
-    price: '$price',
+    price: 20,
   },
 ];
 
 const tenniscours = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+1',
+    src: '/images/Beginner Tennis.png',
     title: 'Beginner Tennis',
     description: 'Introduction to tennis for beginners.',
     date: '2024-08-01',
     price: 50,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+2',
+    src: '/images/Intermediate Tennis.png',
     title: 'Intermediate Tennis',
     description: 'Intermediate level tennis skills.',
     date: '2024-08-08',
     price: 75,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+3',
+    src: '/images/Advanced Tennis.jpg',
     title: 'Advanced Tennis',
     description: 'Advanced tennis techniques and strategies.',
     date: '2024-08-15',
     price: 100,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+4',
-    title: 'Tennis Fitness',
-    description: 'Improve your fitness for tennis.',
-    date: '2024-08-22',
-    price: 60,
-  },
-  {
-    src: 'https://via.placeholder.com/800x400?text=Tennis+5',
+    src: '/images/Tactical Tennis.webp',
     title: 'Tactical Tennis',
     description: 'Learn tactical tennis strategies.',
     date: '2024-08-29',
@@ -182,7 +175,7 @@ function Tennis() {
   return (
     <div className="Sport">
       <div className="content">
-        <ActivitySection title="Tennis" imageUrl="https://via.placeholder.com/800x400?" />
+        <ActivitySection title="Tennis" imageUrl="/images/Tennispage.jpg" />
         <h2>Equipments</h2>
         <Carouselequi products={tennisProducts} addToCart={handleAddToCart} />
         <h2>Our team</h2>

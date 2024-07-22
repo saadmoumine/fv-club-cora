@@ -1,39 +1,172 @@
-.about-us-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
+.aboutus-container {
+  padding: 20px;
+  background-color: #e0f2f1; /* Light teal background */
+}
+
+.aboutus-header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #004d40; /* Dark teal background */
+  color: white;
+}
+
+.aboutus-header h1 {
+  font-size: 48px;
+}
+
+.aboutus-header p {
+  font-size: 24px;
+}
+
+.aboutus-section {
+  margin: 40px 0;
+}
+
+.aboutus-section h2 {
+  text-align: center;
+  color: #004d40; /* Dark teal color */
+}
+
+.aboutus-section p, .aboutus-section ul {
+  text-align: center;
+  color: #004d40; /* Dark teal color */
+}
+
+.aboutus-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aboutus-section li {
+  margin: 10px 0;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  margin: 20px;
+  text-align: center;
+}
+
+/* AboutUs.css */
+
+.aboutus-container {
+  padding: 20px;
+}
+
+.aboutus-header {
+  text-align: center;
+}
+
+.aboutus-section {
+  margin-bottom: 40px;
+}
+
+.team-members, .facilities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-member, .facility {
+  flex: 1 1 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.team-member img, .facility img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.call-to-action {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta-button {
+  background-color: #004d40;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #00332e;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .team-member, .facility {
+    flex: 1 1 100%;
+    margin: 10px 0;
   }
-  
-  .hero-section {
-    background: url('https://via.placeholder.com/800x400?') no-repeat center center/cover;
-    text-align: center;
-    color: white;
-    padding: 100px 20px;
-  }
-  
-  .hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-  
-  .hero-section p {
-    font-size: 1.2em;
-  }
-  
-  .content-section {
-    padding: 40px 20px;
-  }
-  
-  .content-section h2 {
-    font-size: 2em;
-    color: #004d40;
-    margin-bottom: 10px;
-  }
-  
-  .content-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
+}
+
+
+.team-member img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  color: #004d40; /* Dark teal color */
+}
+
+.facilities {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.facility {
+  margin: 20px;
+  text-align: center;
+}
+
+.facility img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility h3 {
+  margin-top: 10px;
+  color: #004d40; /* Dark teal color */
+}
+
+.call-to-action {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.call-to-action h2 {
+  color: #004d40; /* Dark teal color */
+}
+
+.call-to-action p {
+  font-size: 18px;
+  color: #004d40; /* Dark teal color */
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00796b; /* Dark teal */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004d40;
+}

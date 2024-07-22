@@ -13,7 +13,6 @@ function QuantityPopup({ product, onClose, onConfirm }) {
   return (
     <div className="quantity-popup">
       <div className="popup-content">
-        <img src={process.env.PUBLIC_URL + product.image} alt={product.name} />
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <p>Price: ${Number(product.price).toFixed(2)}</p>

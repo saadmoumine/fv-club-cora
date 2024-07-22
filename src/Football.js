@@ -14,92 +14,100 @@ import RegistrationModal from './RegistrationModal';
 const footballProducts = [
   {
     id: 1,
-    src: 'https://via.placeholder.com/800x400?text=Football+1',
-    name: 'Football Goggles',
-    description: 'High-quality football goggles for clear vision.',
-    price: 25.99,
+    src: '/images/Soccer Ball.jpg',
+    name: 'Soccer Ball',
+    description: 'Official size and weight soccer ball for professional games.',
+    price: 29.99,
   },
   {
     id: 2,
-    src: 'https://via.placeholder.com/800x400?text=Football+2',
-    name: 'Football Cap',
-    description: 'Comfortable and durable football cap.',
-    price: 10.99,
+    src: '/images/Soccer Cleats.webp',
+    name: 'Soccer Cleats',
+    description: 'High-quality soccer cleats for better performance.',
+    price: 79.99,
   },
   {
     id: 3,
-    src: 'https://via.placeholder.com/800x400?text=Football+3',
-    name: 'Football Shoes',
-    description: 'High-quality football shoes for better performance.',
-    price: 29.99,
+    src: '/images/Shin Guards.jpg',
+    name: 'Shin Guards',
+    description: 'Durable shin guards for maximum protection.',
+    price: 19.99,
+  },
+  {
+    id: 4,
+    src: '/images/Goalkeeper Gloves.jpg',
+    name: 'Goalkeeper Gloves',
+    description: 'Professional goalkeeper gloves with excellent grip.',
+    price: 39.99,
   },
   // Add more products as needed
 ];
 
+
 const footballteam = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+1',
+    src: '/images/avatar-male.png',
     title: 'David Beckham',
     description: 'World-renowned football player.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+2',
+    src: '/images/avatar-male.png',
     title: 'Lionel Messi',
     description: 'Argentine professional footballer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+3',
+    src: '/images/avatar-male.png',
     title: 'Cristiano Ronaldo',
     description: 'Portuguese professional footballer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+4',
+    src: '/images/avatar-male.png',
     title: 'Pele Santos',
     description: 'Brazilian retired professional footballer.',
-    price: '$price',
+    price: 20,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+5',
+    src: '/images/avatar-male.png',
     title: 'Diego Maradona',
     description: 'Argentine football manager and retired professional footballer.',
-    price: '$price',
+    price: 20,
   },
 ];
 
 const footballcours = [
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+1',
+    src: '/images/Beginner Football.webp',
     title: 'Beginner Football',
     description: 'Introduction to football for beginners.',
     date: '2024-08-01',
     price: 50,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+2',
+    src: '/images/Intermediate Football.jpg',
     title: 'Intermediate Football',
     description: 'Intermediate level football skills.',
     date: '2024-08-08',
     price: 75,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+4',
+    src: '/images/Football Fitness.webp',
     title: 'Football Fitness',
     description: 'Improve your fitness for football.',
     date: '2024-08-22',
     price: 60,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+5',
+    src: '/images/Tactical Football.jpg',
     title: 'Tactical Football',
     description: 'Learn tactical football strategies.',
     date: '2024-08-29',
     price: 80,
   },
   {
-    src: 'https://via.placeholder.com/800x400?text=Football+3',
+    src: '/images/Advanced Football.jpg',
     title: 'Advanced Football',
     description: 'Advanced football techniques and strategies.',
     date: '2024-08-15',
@@ -182,7 +190,7 @@ function Football() {
   return (
     <div className="Sport">
       <div className="content">
-        <ActivitySection title="Football" imageUrl="https://via.placeholder.com/800x400?" />
+        <ActivitySection title="Football" imageUrl="/images/soccerpage.jpg" />
         <h2>Equipments</h2>
         <Carouselequi products={footballProducts} addToCart={handleAddToCart} />
         <h2>Our team</h2>
