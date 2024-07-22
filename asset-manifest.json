@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/fv-club-cora/static/css/main.d7deee99.css",
+    "main.js": "/fv-club-cora/static/js/main.e04421ae.js",
+    "static/js/453.18c64493.chunk.js": "/fv-club-cora/static/js/453.18c64493.chunk.js",
+    "static/media/slick.svg": "/fv-club-cora/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/fv-club-cora/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/fv-club-cora/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/fv-club-cora/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/fv-club-cora/index.html",
+    "main.d7deee99.css.map": "/fv-club-cora/static/css/main.d7deee99.css.map",
+    "main.e04421ae.js.map": "/fv-club-cora/static/js/main.e04421ae.js.map",
+    "453.18c64493.chunk.js.map": "/fv-club-cora/static/js/453.18c64493.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7deee99.css",
+    "static/js/main.e04421ae.js"
+  ]
+}
